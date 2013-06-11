@@ -10,3 +10,9 @@
 [submodule "CMGTools"]
 	path = CMGTools
 	url = git@github.com:h2gglobe/CMGTools.git
+[submodule "CMGTools/External"]
+	path = CMGTools/External
+	url = git@github.com:h2gglobe/External.git
+[submodule "EGamma/EGammaAnalysisTools"]
+	path = EGamma/EGammaAnalysisTools
+	url = git@github.com:h2gglobe/ElectronTools.git
