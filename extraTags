@@ -6,8 +6,8 @@ git clone --mirror git@github.com:cms-sw/cmssw cmssw.git
 
 cd $CDIR
 
-cmsrel CMSSW_5_3_11
-cd CMSSW_5_3_11/src
+cmsrel CMSSW_5_9
+cd CMSSW_5_3_9/src
 cmsenv
 
 git init 
