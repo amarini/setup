@@ -1,0 +1,14 @@
+echo "CommonTools/RecoUtils" >> .git/info/sparsecheckout
+echo "RecoEgamma/EgammaTools" >> .git/info/sparsecheckout
+
+cd ..
+#addpkg CommonTools/RecoUtils V00-00-09 771a64690052e4b4e7eaf68d41f19ba03c6ea05e
+git checkout 771a64690052e4b4e7eaf68d41f19ba03c6ea05e -- CommonTools/RecoUtils
+
+#addpkg RecoEgamma/EgammaTools V09-00-00 ae6aebfd02089494ec045953f1a13c6719d8f9d6
+git checkoout ae6aebfd02089494ec045953f1a13c6719d8f9d6 -- RecoEgamma/EgammaTools
+
+cp HiggsAnalysis/HiggsTo2photons/scripts/download.url EGamma/EGammaAnalysisTools/data/.
+cd EGamma/EGammaAnalysisTools/data/
+wget -i ../../../HiggsAnalysis/HiggsTo2photons/scripts/download.url
+cd ../../../
