@@ -11,7 +11,7 @@ cd CMSSW_5_3_11/src
 cmsenv
 
 git init 
-git remote add setup git@github.com:h2gglobe/setup
+git remote add setup git@github.com:h2gglobe/setup.git
 git fetch setup
 git merge setup/master
 #git checkout TAG
