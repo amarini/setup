@@ -1,0 +1,12 @@
+[submodule "HiggsAnalysis/HiggsTo2photons"]
+	path = HiggsAnalysis/HiggsTo2photons
+	url = git@github.com:h2gglobe/HiggsTo2photons
+[submodule "EgammaAnalysis"]
+	path = EgammaAnalysis
+	url = git@github.com:h2gglobe/EgammaAnalysis.git
+[submodule "EGamma"]
+	path = EGamma
+	url = git@github.com:h2gglobe/EGamma.git
+[submodule "CMGTools"]
+	path = CMGTools
+	url = git@github.com:h2gglobe/CMGTools.git
