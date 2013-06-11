@@ -1,34 +1,26 @@
-#echo "CommonTools/RecoUtils" >> .git/info/sparsecheckout
-#echo "RecoEgamma/EgammaTools" >> .git/info/sparsecheckout
+
+CDIR=$PWD
 
 cd /tmp/$USER
 git clone --mirror git@github.com:cms-sw/cmssw cmssw.git
+
+cd $CDIR
 
 cmsrel CMSSW_5_3_11
 cd CMSSW_5_3_11/src
 cmsenv
 
-#echo "CommonTools/RecoUtils" >> .git/info/sparsecheckout
-#echo "RecoEgamma/EgammaTools" >> .git/info/sparsecheckout
-
 git init 
-git remote add setup git@github.com:amarini/setup
+git remote add setup git@github.com:h2gglobe/setup
 git fetch setup
 git merge setup/master
+#git checkout TAG
 git submodule init 
 git submodule update
 
-#git remote add cmssw git@github.com:cms-sw/cmssw
-#git fetch cmssw-main-ro
-
 git remote add cmssw_local /tmp/$USER/cmssw.git
-#echo "CommonTools/RecoUtils" >> .git/info/sparsecheckout
-#echo "RecoEgamma/EgammaTools" >> .git/info/sparsecheckout
 
-#git addpkg CommonTools/RecoUtils
-#git addpkg RecoEgamma/EgammaTools
-
-#git rev-list -n 1 --before="=2013-05-23 15:41:36" CMSSW_6_2_X
+#need to fetch at each checkout -> Local mirror
 #addpkg CommonTools/RecoUtils V00-00-09 771a64690052e4b4e7eaf68d41f19ba03c6ea05e
 git fetch cmssw_local CMSSW_6_2_X
 git checkout 771a64690052e4b4e7eaf68d41f19ba03c6ea05e -- CommonTools/RecoUtils
@@ -41,3 +33,13 @@ cp HiggsAnalysis/HiggsTo2photons/scripts/download.url EGamma/EGammaAnalysisTools
 cd EGamma/EGammaAnalysisTools/data/
 wget -i ../../../HiggsAnalysis/HiggsTo2photons/scripts/download.url
 cd ../../../
+
+##################### UNUSED STUFF & USEFUL COMMAND
+#echo "CommonTools/RecoUtils" >> .git/info/sparsecheckout
+#echo "RecoEgamma/EgammaTools" >> .git/info/sparsecheckout
+#git addpkg CommonTools/RecoUtils
+#git addpkg RecoEgamma/EgammaTools
+#git rev-list -n 1 --before="=2013-05-23 15:41:36" CMSSW_6_2_X
+
+#git remote add cmssw git@github.com:cms-sw/cmssw
+#git fetch cmssw-main-ro
