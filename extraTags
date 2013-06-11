@@ -25,9 +25,9 @@ git remote add cmssw_local /tmp/$USER/cmssw.git
 git fetch cmssw_local CMSSW_6_2_X
 git checkout 771a64690052e4b4e7eaf68d41f19ba03c6ea05e -- CommonTools/RecoUtils
 
-#addpkg RecoEgamma/EgammaTools V09-00-00 ae6aebfd02089494ec045953f1a13c6719d8f9d6
+#addpkg RecoEgamma/EgammaTools V09-00-00 ae6aebfd02089494ec045953f1a13c6719d8f9d6  96e5f7e
 git fetch cmssw_local CMSSW_6_2_X
-git checkout ae6aebfd02089494ec045953f1a13c6719d8f9d6 -- RecoEgamma/EgammaTools
+git checkout 96e5f7e -- RecoEgamma/EgammaTools
 
 cp HiggsAnalysis/HiggsTo2photons/scripts/download.url EGamma/EGammaAnalysisTools/data/.
 cd EGamma/EGammaAnalysisTools/data/
